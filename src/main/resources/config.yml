@@ -1,0 +1,18 @@
+# MaceDamageCap - Main Configuration
+# Made with love by salatube <3
+#
+# The maximum damage allowed for any vanilla Mace attack.
+# 1 damage = 0.5 heart. Default 14 = 7 hearts.
+damage-cap: 14.0
+
+# Minimum allowed cap. Commands that would set a value below this are rejected.
+min-cap: 0.0
+
+# Maximum allowed cap. Commands that would set a value above this are rejected.
+max-cap: 1000.0
+
+# The chat prefix used by all plugin messages. Supports &-color codes.
+messages-prefix: "&6&lMaceDamageCap &8&l\u00BB &r"
+
+# Whether to log cap changes to the server console.
+log-changes: true

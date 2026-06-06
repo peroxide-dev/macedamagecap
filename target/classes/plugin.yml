@@ -1,0 +1,26 @@
+name: MaceDamageCap
+version: '1.0.0'
+main: com.salatube.macedamagecap.MaceDamageCap
+api-version: '1.21'
+author: salatube
+authors:
+  - salatube
+description: Caps the maximum damage dealt by the vanilla Minecraft Mace. Made with love by salatube <3
+website: https://github.com/salatube
+prefix: MaceDamageCap
+load: POSTWORLD
+commands:
+  macedamagecap:
+    description: MaceDamageCap main command. Made with love by salatube <3
+    aliases:
+      - mdc
+      - macecap
+    usage: /macedamagecap help
+    permission: macedamagecap.admin
+permissions:
+  macedamagecap.admin:
+    description: Allows access to all MaceDamageCap admin commands.
+    default: op
+  macedamagecap.bypass:
+    description: Allows the player to bypass the Mace damage cap.
+    default: false

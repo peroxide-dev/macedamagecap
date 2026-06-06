@@ -1,0 +1,7 @@
+com\salatube\macedamagecap\tabcomplete\MaceDamageCapTabCompleter.class
+com\salatube\macedamagecap\listener\MaceDamageListener.class
+com\salatube\macedamagecap\MaceDamageCap.class
+com\salatube\macedamagecap\manager\BypassManager.class
+com\salatube\macedamagecap\manager\ConfigManager.class
+com\salatube\macedamagecap\util\MessageUtil.class
+com\salatube\macedamagecap\command\MaceDamageCapCommand.class
