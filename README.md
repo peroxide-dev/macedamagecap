@@ -112,7 +112,7 @@ You may also grant `macedamagecap.bypass` to a player manually through your perm
 ## Building from source
 
 ```bash
-git clone <your-repo>
+git clone https://github.com/peroxide-dev/macedamagecap
 cd MaceDamageCap
 mvn clean package
 ```
