@@ -9,13 +9,13 @@ Made with love by **salatube** &lt;3
 ## Features
 
 - **Caps the maximum Mace damage** at a configurable value (default `14.0` = 7 hearts), regardless of fall distance, enchantments (Density, Breach, Smite, etc.), critical hits, Strength effects, or any other damage modifier.
-- **Preserves all vanilla Mace mechanics** — knockback, sounds, particles, and enchantment effects still work normally; only the damage value is reduced when it exceeds the cap.
+- **Preserves all vanilla Mace mechanics** —> knockback, sounds, particles, and enchantment effects still work normally; only the damage value is reduced when it exceeds the cap.
 - **Per-player bypass system** stored on disk using UUIDs, so it survives restarts and works for both online and offline players.
-- **Hot-reloadable configuration** — change the cap in-game and it is written straight to `config.yml`.
+- **Hot-reloadable configuration** —> change the cap in-game and it is written straight to `config.yml`.
 - **Tab completion** for every subcommand and argument.
 - **Colored, professional chat messages** with a configurable prefix.
-- **Zero NMS / zero dependencies** — uses only the Paper API and `net.kyori.adventure`.
-- **Production-ready and SMP-safe** — single high-priority event listener, no per-tick work.
+- **Zero NMS / zero dependencies** —> uses only the Paper API and `net.kyori.adventure`.
+- **Production-ready and SMP-safe** —> single high-priority event listener, no per-tick work.
 
 ---
 
