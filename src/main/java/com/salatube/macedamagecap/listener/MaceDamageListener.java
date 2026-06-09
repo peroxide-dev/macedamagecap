@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageModifier;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -37,10 +38,10 @@ public final class MaceDamageListener implements Listener {
         }
 
         double cap = plugin.getConfigManager().getDamageCap();
-        double damage = event.getDamage();
+        double rawDamage = event.getDamage(DamageModifier.BASE);
 
-        if (damage > cap) {
-            event.setDamage(cap);
+        if (rawDamage > cap) {
+            event.setDamage(DamageModifier.BASE, cap);
         }
     }
 
