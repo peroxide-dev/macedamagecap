@@ -17,12 +17,19 @@ public final class MaceDamageListener implements Listener {
     private final MaceDamageCap plugin;
     private final BypassManager bypassManager;
 
+    private static final DamageModifier[] REDUCTION_MODIFIERS = {
+        DamageModifier.ARMOR,
+        DamageModifier.BLOCKING,
+        DamageModifier.MAGIC,
+        DamageModifier.ABSORPTION
+    };
+
     public MaceDamageListener(MaceDamageCap plugin) {
         this.plugin = plugin;
         this.bypassManager = plugin.getBypassManager();
     }
 
-    @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
         if (!(event.getDamager() instanceof Player damager)) {
             return;
@@ -41,7 +48,14 @@ public final class MaceDamageListener implements Listener {
         double rawDamage = event.getDamage(DamageModifier.BASE);
 
         if (rawDamage > cap) {
-            event.setDamage(DamageModifier.BASE, cap);
+            for (DamageModifier mod : REDUCTION_MODIFIERS) {
+                try {
+                    event.setDamage(mod, 0);
+                } catch (UnsupportedOperationException ignored) {
+                }
+            }
+            event.setDamage(cap);
+            plugin.getLogger().info("[MaceDamageCap] Capped raw=" + rawDamage + " -> final=" + cap + " for " + damager.getName());
         }
     }
 
